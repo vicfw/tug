@@ -31,7 +31,7 @@ export default function LoginForm() {
           boxShadow: 1,
         }}
       >
-        <Image src="" alt="Logo" width={150} height={50} />
+        <Image src="/logo.png" alt="Logo" width={170} height={84} />
         {get.errorMessage && (
           <Alert severity="error" variant="filled">
             {get.errorMessage}

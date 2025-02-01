@@ -1,9 +1,10 @@
 "use client";
 
 import { useLoginMutation } from "@/redux/services/authApi";
+import { localStorageSetter } from "@/utils";
 import { FirebaseError } from "firebase/app";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 
 type FormInputs = {
@@ -28,11 +29,10 @@ export const useLogin = () => {
     // remove error message before submit if its there
     if (errorMessage) setErrorMessage("");
     try {
-      await login({ email, password }).unwrap();
+      const data = await login({ email, password }).unwrap();
+      localStorageSetter("token", data.token);
       router.push("/dashboard");
     } catch (error) {
-      router.push("/dashboard");
-
       if (error instanceof FirebaseError) {
         if (error.code.includes("invalid-credential"))
           setErrorMessage("Invalid email or password");
@@ -42,6 +42,14 @@ export const useLogin = () => {
       }
     }
   };
+
+  useEffect(() => {
+    // Check if user is authenticated, redirect to dashboard
+    const token = localStorage.getItem("token");
+    if (token) {
+      router.push("/dashboard");
+    }
+  }, [router]);
 
   return {
     get: { register, isLoading, errors, errorMessage },
