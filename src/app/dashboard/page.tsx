@@ -15,7 +15,7 @@ export default function DashboardPage() {
     // Check if user is authenticated, if not redirect to login page
     const token = localStorage.getItem("token");
     if (!token) {
-      router.push("/auth/login");
+      router.push("/login");
     }
   }, [router]);
 
