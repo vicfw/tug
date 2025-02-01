@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Tug Admin
 
-## Getting Started
+Tug Admin is a Next.js-based administrative dashboard application. It utilizes modern web technologies to provide a robust and efficient admin interface.
 
-First, run the development server:
+## Features
 
-```bash
+- Built with Next.js 15 for optimal performance and SEO
+- Material-UI (MUI) for sleek, responsive design
+- Redux for state management
+- Firebase integration for backend services
+- Form handling with react-hook-form
+- Charting capabilities with MUI X Charts
+- TypeScript for type safety
+
+## Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- Node.js (version 14 or later recommended)
+- npm (usually comes with Node.js)
+
+## Installation
+
+1. Clone the repository:
+   \`\`\`
+   git clone https://github.com/your-username/tug-admin.git
+   cd tug-admin
+   \`\`\`
+
+2. Install the dependencies:
+   \`\`\`
+   npm install
+   \`\`\`
+
+## Development
+
+To start the development server:
+
+\`\`\`
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+\`\`\`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This will start the application in development mode using Turbopack. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Building for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+To create a production build:
 
-## Learn More
+\`\`\`
+npm run build
+\`\`\`
 
-To learn more about Next.js, take a look at the following resources:
+## Starting Production Server
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To start the production server:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+\`\`\`
+npm run start
+\`\`\`
 
-## Deploy on Vercel
+## Linting
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+To run the linter:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+\`\`\`
+npm run lint
+\`\`\`
+
+## Tech Stack
+
+- [Next.js](https://nextjs.org/)
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Material-UI (MUI)](https://mui.com/)
+- [Redux Toolkit](https://redux-toolkit.js.org/)
+- [Firebase](https://firebase.google.com/)
+- [React Hook Form](https://react-hook-form.com/)
+- [date-fns](https://date-fns.org/)
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is private and not licensed for public use.
